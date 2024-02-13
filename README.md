@@ -13,8 +13,12 @@ mvn clean package
 # Configure Pulsar
 
 ## Copy schemas
-Copy generated Avro schemas to your Pulsar's schemas directory (the paths may be adjusted, here they match the script below):
+Original (raw) Avro schemas (.avsc files) are available as:
+* v1: models-v1/src/main/resources/schemas/avro/test/v1/TestMessage.avsc
+* v2: models-v2/src/main/resources/schemas/avro/test/v2/TestMessage.avsc
+* v3: models-v3/src/main/resources/schemas/avro/test/v3/TestMessage.avsc
 
+Copy generated Avro schemas to your Pulsar's schemas directory (the paths may be adjusted, here they match the script below):
 * models-v1/target/schemas/avro/test/v1/TestMessage.json -> /pulsar/schemas/test11/v1/
 * models-v2/target/schemas/avro/test/v2/TestMessage.json -> /pulsar/schemas/test11/v2/
 * models-v3/target/schemas/avro/test/v3/TestMessage.json -> /pulsar/schemas/test11/v3/
