@@ -76,6 +76,7 @@ Run *MessageJob1* and a selected producer to observe the behaviour.
 # BEHAVIOUR
 ## VALID: expected schema v1 vs actual schema v1 (just a working reference)
 Producer to use: *MessageProducer1*
+
 Sent message: 
 ```
 {"eventIdentifier": "eventId", "type": "TYPE_A", "status": "BAD", "properties": {"A": "1", "B": "2"}, "partInformation": [{"genuinePartNumber": "number1", "genuinePartQuantity": 1, "genuinePartMeasure": "measure1"}, {"genuinePartNumber": "number2", "genuinePartQuantity": 2, "genuinePartMeasure": "measure2"}]}
@@ -90,6 +91,7 @@ Actual result:
 ```
 ## INVALID: expected schema v1 vs actual schema v2
 Producer to use: *MessageProducer2*
+
 Sent message: 
 ```
 {"eventIdentifier": "eventId", "type": "TYPE_A", "active": true}
@@ -144,6 +146,7 @@ java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 3
 ```
 ## INVALID: expected schema v1 vs actual schema v3
 Producer to use: *MessageProducer3*
+
 Sent message: 
 ```
 {"eventIdentifier": "eventId", "type": "TYPE_C", "status": "BAD", "properties": {"A": "1", "B": "2"}, "partInformation": [{"genuinePartNumber": "number1", "genuinePartQuantity": 1, "genuinePartMeasure": "measure1"}, {"genuinePartNumber": "number2", "genuinePartQuantity": 2, "genuinePartMeasure": "measure2"}]}
